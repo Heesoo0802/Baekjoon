@@ -1,0 +1,5 @@
+# 실행파일 무시하기
+main
+*.out
+*.exe
+/build

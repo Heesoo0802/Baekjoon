@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run c or cpp",
+      "type": "shell",
+      "command": "sh",
+      "args": [
+        "-c",
+        "mkdir -p ${fileDirname}/build && ext='${file##*.}'; exe='${fileDirname}/build/${fileBasenameNoExtension}'; [[ $ext = 'c' ]] && gcc -std=c11 '${file}' -o \"$exe\" && \"$exe\" || clang++ -std=c++17 '${file}' -o \"$exe\" && \"$exe\""
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "C or C++ 파일을 자동으로 감지해 build 폴더에서 실행합니다."
+    }
+  ]
+}
+
+
+
+
