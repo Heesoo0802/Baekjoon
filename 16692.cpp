@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#define int long long 
 using namespace std;
 struct counter
 {
@@ -10,11 +11,11 @@ struct comp
 {
     bool operator()(counter a, counter b)
     {
-        if(a.ts == b.ts) return a.ts > b.ts;
+        if(a.ts == b.ts) return a.cn > b.cn;
         return a.ts > b.ts; //priority queue front = min
     }
 };
-int main()
+signed main()
 {
     int n, c;
     cin >> n >> c;
